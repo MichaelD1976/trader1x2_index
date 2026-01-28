@@ -138,7 +138,6 @@
             width: 40px;
             height: 3px;
             background: var(--color-streamlit-red);
-            transform: rotate(-35deg);
             top: 50%;
             left: 50%;
             transform-origin: center;
@@ -151,6 +150,39 @@
         
         .logo span {
             color: var(--color-text-light);
+        }
+
+        /* Footer logo variant */
+        .footer-logo-icon {
+            position: relative;
+            display: inline-flex;
+            align-items: flex-end;
+            gap: 2px;
+            height: 28px;
+            width: fit-content;
+        }
+        
+        .footer-logo-icon .logo-bar {
+            width: 6px;
+            background: var(--color-text-medium);
+            border-radius: 2px;
+        }
+        
+        .footer-logo-icon .logo-bar:nth-child(1) { height: 11px; }
+        .footer-logo-icon .logo-bar:nth-child(2) { height: 18px; }
+        .footer-logo-icon .logo-bar:nth-child(3) { height: 14px; }
+        .footer-logo-icon .logo-bar:nth-child(4) { height: 25px; }
+        
+        .footer-logo-icon::after {
+            content: '';
+            position: absolute;
+            width: 35px;
+            height: 3px;
+            background: var(--color-streamlit-red);
+            top: 14px;
+            left: -2px;
+            transform: rotate(-35deg);
+            transform-origin: left center;
         }
         
         .nav-cta {
@@ -479,7 +511,6 @@
         .audience-card:nth-child(2) { animation-delay: 0.2s; }
         .audience-card:nth-child(3) { animation-delay: 0.3s; }
         .audience-card:nth-child(4) { animation-delay: 0.4s; }
-        .audience-card:nth-child(5) { animation-delay: 0.5s; }
         
         .audience-card:hover {
             background: var(--color-tertiary-bg);
@@ -574,11 +605,15 @@
         }
         
         .footer-brand {
-            font-family: var(--font-display);
-            font-size: 1.75rem;
-            font-weight: 700;
+            font-family: var(--font-main);
+            font-size: 1.5rem;
+            font-weight: 600;
             color: white;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
         }
         
         .footer-description {
@@ -749,11 +784,11 @@
                 <h1>Data-Driven Football Intelligence</h1>
                 <div class="hero-divider"></div>
                 <p class="hero-subtitle">
-                    Comprehensive analytics platform delivering unfiltered football data, 
+                    Comprehensive analytics platform delivering processed football data, 
                     prediction frameworks and insights for traders, scouts, clubs and fans.
                 </p>
                 <div class="cta-group">
-                    <a href="#app" class="btn-primary">
+                    <a href="https://app.trader1x2.com" class="btn-primary">
                         Launch Platform
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -772,15 +807,15 @@
                         </div>
                         <div class="metric">
                             <div class="metric-label">Player Profiles</div>
-                            <div class="metric-value">5000+</div>
+                            <div class="metric-value">5,000+</div>
                         </div>
                         <div class="metric">
                             <div class="metric-label">Team Data Points</div>
-                            <div class="metric-value">12,000+</div>
+                            <div class="metric-value">15,000+</div>
                         </div>
                         <div class="metric">
                             <div class="metric-label">Player Data Points</div>
-                            <div class="metric-value">14,000+</div>
+                            <div class="metric-value">30,000+</div>
                         </div>
                     </div>
                     <div class="chart-placeholder">
@@ -812,7 +847,7 @@
                     <div class="feature-icon">📊</div>
                     <h3 class="feature-title">Match Analytics</h3>
                     <p class="feature-description">
-                        Deep analysis of match outcomes, event predictions, and performance metrics 
+                        Deep analysis of match outcomes, event predictions and performance metrics 
                         across leagues and competitions.
                     </p>
                 </div>
@@ -839,7 +874,7 @@
                     <div class="feature-icon">🎯</div>
                     <h3 class="feature-title">Prediction Frameworks</h3>
                     <p class="feature-description">
-                        Sophisticated prediction models analyzing team and player performance 
+                        Sophisticated prediction models analysing team and player performance 
                         trends for accurate forecasting.
                     </p>
                 </div>
@@ -866,19 +901,11 @@
                     </p>
                 </div>
                 
-                <!-- <div class="audience-card">
-                    <div class="audience-icon">🎮</div>
-                    <h3 class="audience-title">Gaming Professionals</h3>
-                    <p class="audience-description">
-                        Evaluate and optimize your football product with robust data analytics
-                    </p>
-                </div> -->
-                
                 <div class="audience-card">
                     <div class="audience-icon">🔍</div>
                     <h3 class="audience-title">Scouts & Clubs</h3>
                     <p class="audience-description">
-                        Access independent player valuations and performance metrics for recruitment
+                        Access independent player valuation and performance metrics for recruitment
                     </p>
                 </div>
                 
@@ -886,7 +913,7 @@
                     <div class="audience-icon">⭐</div>
                     <h3 class="audience-title">Dedicated Fans</h3>
                     <p class="audience-description">
-                        Gain deeper insights into your favorite teams and players
+                        Gain deeper insights into your favourite teams and players
                     </p>
                 </div>
                 
@@ -908,7 +935,6 @@
             <p class="cta-subtitle">
                 Access comprehensive football analytics and insights now
             </p>
-            <!-- IMPORTANT: Replace this URL with your actual Streamlit app URL -->
             <a href="https://app.trader1x2.com" class="btn-cta-large">
                 Launch Trader1X2 Platform
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -923,7 +949,7 @@
         <div class="footer-container">
             <div>
                 <div class="footer-brand">
-                    <div class="logo-icon" style="height: 28px; margin-bottom: 0.5rem;">
+                    <div class="footer-logo-icon">
                         <div class="logo-bar"></div>
                         <div class="logo-bar"></div>
                         <div class="logo-bar"></div>
@@ -942,23 +968,23 @@
             </div>
             
             <div>
-                <h4 class="footer-section-title">Platform</h4>
+                <!-- <h4 class="footer-section-title">Platform</h4>
                 <ul class="footer-links">
                     <li><a href="#app">Launch App</a></li>
                     <li><a href="#features">Features</a></li>
                     <li><a href="mailto:admin@trader1x2.com">API Access</a></li>
                     <li><a href="mailto:admin@trader1x2.com">Documentation</a></li>
-                </ul>
+                </ul> -->
             </div>
             
             <div>
-                <h4 class="footer-section-title">Company</h4>
+                <!-- <h4 class="footer-section-title">Company</h4>
                 <ul class="footer-links">
                     <li><a href="mailto:admin@trader1x2.com">Contact</a></li>
                     <li><a href="mailto:admin@trader1x2.com">Enterprise</a></li>
                     <li><a href="mailto:admin@trader1x2.com">Support</a></li>
                     <li><a href="mailto:admin@trader1x2.com">Privacy</a></li>
-                </ul>
+                </ul> -->
             </div>
         </div>
         
